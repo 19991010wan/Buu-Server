@@ -1,0 +1,9 @@
+<view class='pages'>
+  <form bindsubmit="onSave">
+    <textarea value="{{textVal}}" bindinput="handletextinput" name="opinion" placeholder="表白内容" />
+
+    <view class="content">
+      <button bindtap='fb'>发布</button>
+    </view>
+    </form>
+</view>

@@ -1,0 +1,72 @@
+<view class="container">
+    <!-- tab导航栏 -->
+    <!-- scroll-left属性可以控制滚动条位置 -->
+    <!-- scroll-with-animation滚动添加动画过渡 -->
+    <scroll-view scroll-x="true" class="nav" scroll-left="{{navScrollLeft}}" scroll-with-animation="{{true}}">
+        <block wx:for="{{navData}}" wx:for-index="idx" wx:for-item="navItem" wx:key="idx">
+            <view class="nav-item {{currentTab == idx ?'active':''}}"  data-current="{{idx}}" bindtap="switchNav">{{navItem.text}}</view>
+        </block> 
+    </scroll-view>
+    <!-- 页面内容 -->
+    <swiper class="tab-box" current="{{currentTab}}" duration="300" bindchange="switchTab">
+        <swiper-item wx:for-index="idx" wx:key="idx" class="tab-content">
+          <view class="container0">
+            <view class="items">
+                <view class="item" wx:for="{{lists}}" bindtap="detail" wx:key="its" data-item="{{item}}" data-title="{{item.title}}">
+                    <!-- <view class="i-top">
+                        <image class="i-img" src="{{v.imgUrl}}"></image>
+                        <view class="i-video-play"></view>
+                    </view> -->
+                    <view class="content">
+                        <view class="c-top">
+                            <text class="title">{{item.title}}</text>
+                            <text class="info ellipsis-3">{{item.info}}</text>
+                        </view>
+                        <view class="c-bottom">
+                            <view class="user">
+                                <image class="u-img" src="{{item.avatar}}"></image>
+                                <view class="u-box">
+                                    <text class="u-name">{{item.uName}}</text>
+                                    <!--<text class="u-time">{{v.time}}</text>-->
+                                </view>
+                            </view>
+                            <view class="right">
+                                <!-- <text class="iconfont icon-shoucang r-icon-shoucang"> {{v.shoucang}}</text> -->
+                                <text class="iconfont icon-dianzan r-icon-like"> {{item.like}}</text>
+                                <text class="iconfont icon-weibiaoti r-icon-comment"> {{item.comment}}</text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+              </view>
+              <!-- <view class="weui-loadmore weui-loadmore_line weui-bg-transparent">
+                  <view class="weui-loadmore__tips weui-loadmore__tips_in-line">我是有底线的</view>
+              </view> -->
+              <!--悬浮菜单-->
+              <!--<view class="menu">
+                  <text class="iconfont icon-svg35"></text>
+              </view>-->
+          </view>
+        </swiper-item>
+
+        <swiper-item wx:for-index="idx" wx:key="idx" class="tab-content">
+          <view class="container">
+            <view class="userinfo" data-item="{{userInfo}}">
+              <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+              <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+            </view>
+            <view bindtap="toChat">
+              <button class="chat">聊天室 点击进入</button>
+            </view>
+          </view>
+        </swiper-item>
+    </swiper>
+
+    <movable-area class="movable-area">
+      <movable-view class="movable-view" direction="all" bindtap="add_infor">
+        <image src="/images/add.png" class="add_view"></image>
+      </movable-view>
+  </movable-area>
+</view>
+
+

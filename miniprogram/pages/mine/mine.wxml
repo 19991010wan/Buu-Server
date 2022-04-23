@@ -1,0 +1,116 @@
+<view class="">
+  <view class="app-banner">
+		<image class="app-banner" src="{{bannerSrc}}"></image>
+	</view>
+	<!-- <view class="app-main">
+		<view class="user-info">
+			<button 
+			class="userImg" 
+			open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+      style="background-image: url({{avatarUrl}})"
+      size="default"></button>
+			<text class="username">{{userInfo.nickName}}</text>
+	</view> -->
+  <view class="page__bd page__bd_spacing ">
+      <view class="weui-flex"> 
+              <view class="weui-flex__item order">
+                <view class="placeholder">
+                  <view class=" left-text1">
+                    <image src="{{avatarUrl}}" class="avatarUrl"></image>
+                    <!-- <view class=" left-text2">用户登录</view> -->
+                     <view class=" left-text2">{{username}}</view>
+                    </view> 
+                </view>
+              </view>
+              <view class="weui-flex__item order">
+                <view class="placeholder">
+                  <image src="/images/right.png" class="order_icon" bindtap="next1"></image>
+                </view>
+              </view>
+      </view>
+       <view class="weui-flex" bindtap="next2"> 
+              <view class="weui-flex__item order1">
+                <view class="placeholder">
+                  <view class=" left-text1">
+                    <image src="http://m.qpic.cn/psc?/V51jU5mU0273mb0IdiHI2S0Nty2Hs3XW/ruAMsa53pVQWN7FLK88i5tp9FKXukWIgJQixTmgKzYKemBkE1TpLln4BeE*euv9d0yofm8shU4vME2rXw26esJRs64xQMMbPzbH17Rr0DiQ!/mnull&bo=yADIAMgAyAADCSw!&rf=photolist&t=5" class="avatarUrl2"></image>
+                    <view class=" left-text22">我的论坛</view>
+                    </view> 
+                </view>
+              </view>
+              <view class="weui-flex__item order">
+                <view class="placeholder">
+                  <image src="/images/right2.png" class="order_icon2"></image>
+                </view>
+              </view>
+      </view>
+       <view class="weui-flex" bindtap="next3"> 
+              <view class="weui-flex__item order1">
+                <view class="placeholder">
+                  <view class=" left-text1">
+                    <image src="http://m.qpic.cn/psc?/V51jU5mU0273mb0IdiHI2S0Nty2Hs3XW/ruAMsa53pVQWN7FLK88i5tp9FKXukWIgJQixTmgKzYKarH4LWmEL.vzsxNlhcqAsXemQLiJqH7EXqI*rMXcjLsaDvJj5bt4cJ1p1tRlsJSs!/mnull&bo=yADIAMgAyAADCSw!&rf=photolist&t=5" class="avatarUrl2"></image>
+                    <view class=" left-text22">我的表白</view>
+                    </view> 
+                </view>
+              </view>
+              <view class="weui-flex__item order">
+                <view class="placeholder">
+                  <image src="/images/right2.png" class="order_icon2"></image>
+                </view>
+              </view>
+      </view>
+      <view class="weui-flex" bindtap="next4"> 
+              <view class="weui-flex__item order1">
+                <view class="placeholder">
+                  <view class=" left-text1">
+                    <image src="http://m.qpic.cn/psc?/V51jU5mU0273mb0IdiHI2S0Nty2Hs3XW/ruAMsa53pVQWN7FLK88i5hevesCFCCnSbtnMMCHAHXD*gMKe6DtwIN58VpLo.Pi1oAsr3jdDQupLLr6J.DFHXPQUMr*0O44.OrNWGGe5UbM!/mnull&bo=yADIAAAAAAADByI!&rf=photolist&t=5" class="avatarUrl2"></image>
+                    <view class=" left-text22">我的共享</view>
+                    </view>
+                </view>
+              </view>
+              <view class="weui-flex__item order">
+                <view class="placeholder">
+                  <image src="/images/right2.png" class="order_icon2"></image>
+                </view>
+              </view>
+      </view>
+      <view class="bottom">
+        <button class="btn_kefu" open-type="contact" hover-class="none">联系客服</button>
+        <button class="btn_feedback" open-type="feedback" hover-class="none">意见反馈</button>
+      </view>
+      
+      <!-- <view class="weui-flex"> 
+              <view class="weui-flex__item order1">
+                <view class="placeholder">
+                  <view class=" left-text1">
+                    <image src="http://m.qpic.cn/psc?/V51jU5mU0273mb0IdiHI2S0Nty2Hs3XW/ruAMsa53pVQWN7FLK88i5hevesCFCCnSbtnMMCHAHXD*gMKe6DtwIN58VpLo.Pi1oAsr3jdDQupLLr6J.DFHXPQUMr*0O44.OrNWGGe5UbM!/mnull&bo=yADIAAAAAAADByI!&rf=photolist&t=5" class="avatarUrl2"></image>
+                    <button class=" left-text22" open-type="contact">联系客服</button>
+                    </view>
+                </view>
+              </view>
+              <view class="weui-flex__item order">
+                <view class="placeholder">
+                  <image src="/images/right2.png" class="order_icon2"></image>
+                </view>
+              </view>
+      </view> -->
+       <!-- <view class="weui-flex"> 
+              <view class="weui-flex__item order1">
+                <view class="placeholder">
+                  <view class=" left-text1">
+                    <image src="http://m.qpic.cn/psc?/V51jU5mU0273mb0IdiHI2S0Nty2Hs3XW/ruAMsa53pVQWN7FLK88i5tp9FKXukWIgJQixTmgKzYLiclcA4KRQQSOUXxFLvAMmfcntb4xxa0FIdy1c1W8FvLout5dL4Eysbif1ijeelsA!/mnull&bo=yADIAMgAyAADCSw!&rf=photolist&t=5" class="avatarUrl2"></image>
+                    <view class=" left-text22">我的收藏</view>
+                    </view> 
+                </view>
+              </view>
+              <view class="weui-flex__item order">
+                <view class="placeholder">
+                  <image src="/images/right2.png" class="order_icon2" bindtap="next"></image>
+                </view>
+              </view>
+      </view> -->
+       
+      
+    </view>
+    
+  </view>

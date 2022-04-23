@@ -1,0 +1,158 @@
+/**index.wxss**/
+ 
+.header {
+    margin: 90rpx 0 90rpx 50rpx;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    width: 650rpx;
+    height: 300rpx;
+    line-height: 450rpx;
+}
+ 
+.header image {
+    width: 200rpx;
+    height: 200rpx;
+}
+ 
+.content {
+    margin-left: 50rpx;
+    margin-bottom: 90rpx;
+}
+ 
+.content text {
+    display: block;
+    color: #9d9d9d;
+    margin-top: 40rpx;
+}
+ 
+.bottom {
+    border-radius: 80rpx;
+    margin: 70rpx 50rpx;
+    font-size: 35rpx;
+}
+
+
+
+
+
+.swiper-item{
+  display: block;
+  width:750rpx;
+  height: 365rpx;
+}
+
+.search{
+display: flex;
+  flex-direction: row;
+  height: 50rpx;
+align-items: center;
+}
+
+.search .scan{
+display: flex;
+  flex-direction: column;
+align-items: center;
+width: 10%;
+}
+
+.search .search-input{
+padding: 5rpx;
+background-color: #FFFFFF;
+display: flex;
+flex-direction: row;
+height: 100%;
+width: 80%;
+-moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius:5px;
+align-items: center;
+}
+
+.search-icon{
+width: 30rpx;
+height: 30rpx;
+}
+
+.search-text{
+top:0px;
+padding:0px;
+left: 0rpx;
+right: 0rpx;
+}
+
+.widgets-img{
+width: 40rpx;
+height: 40rpx;
+}
+
+.widgets-title{
+color: #888888;
+  font-size: 1px;
+}
+
+.big-logo{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+
+.logoinfo{
+display: flex;
+flex-direction: column;
+align-items: center;
+width:150rpx; 
+height: 150rpx; 
+}
+
+.logotext{
+color: #aaa;
+font-size: 22rpx;
+}
+
+
+/*分割线样式*/
+.divLine{
+  background: #E0E3DA;
+  width: 100%;
+  height: 5rpx;
+ }
+
+ .Show_txt{
+  font-size: 40rpx;
+  color: #969799;
+  display: table;
+  width: auto;
+  white-space: nowrap;
+  border-spacing: 0.5rem 0;
+  margin-top: 20rpx;
+  margin-left: 28rpx;
+  margin-right: 28rpx;
+  margin-bottom: 20rpx;
+}
+
+.Show_txt::before,.Show_txt::after{
+  display: table-cell;
+  content: "";
+  width: 50%;
+  background: linear-gradient(#D8D8D8, #D8D8D8) repeat-x center;
+  background-size: 0.1rem 0.1rem;
+}
+
+.VideoView{
+  height: 450rpx;
+  width: 700rpx;
+  margin-left: 25rpx;
+}
+
+.IntroInfor{
+  font-size:15px;
+  font-weight:bold;
+  font-family:"KaiTi";
+  text-indent:2em;
+  text-align: justify;
+  text-align-last: justify;
+  color: #000000;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}

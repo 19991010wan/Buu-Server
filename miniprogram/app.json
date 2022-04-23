@@ -1,0 +1,67 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/sociaty-infor/sociaty-infor",
+    "pages/loveexpress/loveexpress", 
+    "pages/schooltopic/schooltopic",
+    "pages/add_topic/add_topic",
+    "pages/inforcommon/inforcommon",
+    "pages/schoolmates/schoolmates",
+    "pages/mine/mine",
+    "pages/mytopic/mytopic",
+    "pages/mylove/mylove",
+    "pages/myinforshare/myinforshare",
+    "pages/myshoucang/myshoucang",
+    "pages/login/login",
+    "pages/login_addso/login_addso",
+    "pages/search/search",
+    "pages/add_love/add_love",
+    "pages/add_infor/add_infor",
+    "pages/add_schoolshare/add_schoolshare",
+    "pages/add_sociatyinfor/add_sociatyinfor",
+    "pages/detail_sociatyinfor/detail_sociatyinfor",
+    "pages/detail_schooltopic/detail_schooltopic",
+    "pages/detail_love/detail_love",
+    "pages/detail_schoolshare/detail_schoolshare",
+    "pages/detail_Informationcommen/detail_Informationcommen",
+    "pages/shiyan2/shiyan2",
+    "pages/shiyan3/shiyan3",
+    "pages/shiyan4/shiyan4",
+    "pages/shiyan5/shiyan5",
+    "pages/shiyan6/shiyan6",
+    "pages/shiyan7/shiyan7",
+    "pages/shiyan8/shiyan8",
+    "pages/shiyan9/shiyan9",
+    "pages/shiyan10/shiyan10",
+    "pages/shiyan11/shiyan11",
+    "pages/shiyan1/shiyan1"
+    
+  ],
+  "window": {
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#eb4450",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#ffa5a5",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/tabler/-home0.png",
+        "selectedIconPath": "images/tabler/-home1.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/tabler/-mine0.png",
+        "selectedIconPath": "images/tabler/-mine1.png"
+      }
+      
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

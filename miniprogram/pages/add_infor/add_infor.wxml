@@ -1,0 +1,30 @@
+<view class='pages'>
+  <form bindsubmit="onSave">
+    <text class="text_biaoti">~~~您可以共享一些网站、百度云盘或者公众号等等~~~</text>
+
+    <view class="post-container">
+      <view class='fenlei'>
+        <text>主题</text>
+        <!-- 下拉框 -->
+        <view class='select_box'>
+          <view class='select' catchtap='selectTaps'>
+            <text class='select_text'>{{selectDatas[indexs]}}</text>
+            <!-- <image class='words_img' src='../../images/sanjiao.png'></image> -->
+            <image class='select_img {{shows&&"select_img_rotate"}}' src='../../images/sanjiao.png'></image>
+          </view>
+          <view class='option_box' style='height:{{shows?(selectDatas.length>5?300:selectDatas.length*60):0}}rpx;'>
+            <text class='option' style='{{indexs==selectDatas.length-1&&"border:0;"}}' wx:for='{{selectDatas}}' wx:key='this' data-index='{{index}}' catchtap='optionTaps'>{{item}}</text>
+          </view>
+				</view>
+			</view>
+		</view>
+
+    <textarea value="{{textVal}}" bindinput="handletextinput" name="opinion" placeholder="共享内容" />
+
+    <view class='section-line'></view>
+
+    <view class="content">
+      <button bindtap='fb'>发布</button>
+    </view>
+    </form>
+</view>

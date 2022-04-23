@@ -1,0 +1,39 @@
+<view>
+  <scroll-view scroll-y="true" style="height: 100%; width: 100%; display: flex; flex-direction: column;">
+    <!-- 
+        轮播图
+        -->
+        <view style="width: 100%; height: auto; margin-bottom:10px;">
+            <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}"
+                    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="width:100%;height:365rpx;" circular="true">
+                <block wx:for-items="{{swipers}}">
+                    <swiper-item>
+                        <image class="swiper-item" src="{{item.image}}" mode="aspectFill"/>
+                    </swiper-item>
+                </block>
+            </swiper>
+        </view>
+
+        <block wx:for="{{list}}" wx:key="index">
+          <!-- 包裹图片+两行文字 id="{{index}}"是给按下了那个item记录-->
+          <view class="view_tupian_wenzi" bindtap="click" data-item="{{item}}">
+            
+            <!-- 包裹两行文字 -->
+            <view class="view_wenzi2">
+              <view class="yonghu">
+                <image class="image_1" src="http://m.qpic.cn/psc?/V51jU5mU0273mb0IdiHI2S0Nty2Hs3XW/ruAMsa53pVQWN7FLK88i5ruDpXOEBIBF0NQGtDYz6VCHUjYwqF4MsE8Rh3cvyICvOPEfcW*wdBISg4.xbclbKsliQhzPdKsZjUH5p1gRxxs!/mnull&bo=6gDXAOoA1wABCS4!&rf=photolist&t=5" />
+                <text class="yonghuming">匿名用户</text>
+              </view>
+              <text class="text_small">{{item.textVal}}</text>
+            </view>
+          </view>
+        </block>
+
+        <movable-area class="movable-area">
+          <movable-view class="movable-view" direction="all" bindtap="add_topic">
+            <image src="/images/add.png" class="add_view"></image>
+          </movable-view>
+        </movable-area>
+
+  </scroll-view>
+</view>

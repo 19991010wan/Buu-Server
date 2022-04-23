@@ -1,0 +1,24 @@
+ /* miniprogram/pages/fb/fb.wxss */
+ .pages{
+  background-color:  #ffffff;
+  width: 98%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.section-line{
+  /* 分界线 */
+      width:90%;
+      height:1rpx;
+      background: #eeeeee;
+      margin: 0 auto;
+  }
+
+
+button{
+  margin-top: 20rpx;
+  background-color: #eb4450;
+}
+.radio-group{
+  display: flex;
+}

@@ -1,0 +1,78 @@
+.app-banner {
+  width: 100%;
+  height: 372rpx; }
+
+.order_icon{
+  width:30rpx;
+  height:30rpx;
+  float:right;
+  padding-top:20rpx;
+}
+.order_icon2{
+  width:50rpx;
+  height:50rpx;
+  float:right;
+}
+.order{
+  /* border: 1px solid black; */
+  padding: 31rpx 0px;
+}
+/* .order1{
+  border: 1px solid black;
+  padding: 10rpx 0px
+} */
+.left-text2{
+   float:left;
+   font-size: 28rpx;
+   color: #333;
+   padding-top:20rpx;
+}
+.left-text22{
+   float:left;
+   font-size: 30rpx;
+   color: #333;
+   padding-top:35rpx;
+}
+.avatarUrl{
+  width:80rpx;
+  height:80rpx;
+  float:left;
+  border: 1px solid #eee;
+  border-radius: 50px;
+  margin-right:5px;
+}
+.avatarUrl2{
+  width:40rpx;
+  height:40rpx;
+  float:left;
+  margin-right:20rpx;
+  padding-top:40rpx;
+}
+
+.page__hd {
+  padding: 40px;
+}
+.page__bd {
+  padding-bottom: 45px;
+}
+.page__bd_spacing {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.bottom{
+  position: fixed;
+  text-align: center;
+  bottom: 10rpx;
+  left: 0;
+  right: 0;
+}
+
+.btn_kefu{
+  font-size: 25rpx;
+}
+
+.btn_feedback{
+  font-size: 25rpx;
+}
+

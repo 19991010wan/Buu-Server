@@ -1,0 +1,152 @@
+<view>
+  <!--导航条-->
+  <view class="navbar">
+    <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+  </view>
+
+  <!--全部-->
+  <view wx:if="{{currentTab==0}}">
+    <view wx:if="{{list_0.length>0}}">
+      <block wx:for="{{list_0}}" wx:key="index">
+        <!-- 包裹图片+两行文字 id="{{index}}"是给按下了那个item记录-->
+        <view class="view_tupian_wenzi" bindtap="click" data-item="{{item}}" data-leixing="{{item.leixing}}">
+          <!-- <image class="image_1" src="../images/main_geren.png" /> -->
+          <!-- 包裹两行文字 -->
+          <view class="view_wenzi2">
+            <text class="text_zhuti">主题：{{item.leixing}}</text>
+            <text class="text_small">{{item.textVal}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class="Rose-empty" wx:else>
+        论坛还是空的，快来发布吧~
+    </view>
+  </view>
+
+  <!--吐槽-->
+  <view wx:if="{{currentTab==1}}">
+    <view wx:if="{{list_1.length>0}}">
+      <block wx:for="{{list_1}}" wx:key="index">
+      <!-- 包裹图片+两行文字 id="{{index}}"是给按下了那个item记录-->
+        <view class="view_tupian_wenzi" bindtap="click" data-item="{{item}}" data-leixing="{{item.leixing}}">
+          <!-- <image class="image_1" src="../images/main_geren.png" /> -->
+          <!-- 包裹两行文字 -->
+          <view class="view_wenzi2">
+            <text class="text_zhuti">主题：{{item.leixing}}</text>
+            <text class="text_small">{{item.textVal}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class="Rose-empty" wx:else>
+      论坛还是空的，快来发布吧~
+    </view>
+  </view>
+  
+  <!--英语-->
+  <view hidden="{{currentTab!==2}}">
+    <view wx:if="{{list_2.length>0}}">
+      <block wx:for="{{list_2}}" wx:key="index">
+      <!-- 包裹图片+两行文字 id="{{index}}"是给按下了那个item记录-->
+        <view class="view_tupian_wenzi" bindtap="click" data-item="{{item}}" data-leixing="{{item.leixing}}">
+          <!-- <image class="image_1" src="../images/main_geren.png" /> -->
+          <!-- 包裹两行文字 -->
+          <view class="view_wenzi2">
+            <text class="text_zhuti">主题：{{item.leixing}}</text>
+            <text class="text_small">{{item.textVal}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class="Rose-empty" wx:else>
+      论坛还是空的，快来发布吧~
+    </view>
+  </view>
+
+  <!--考试-->
+  <view hidden="{{currentTab!==3}}">
+    <view wx:if="{{list_3.length>0}}">
+      <block wx:for="{{list_3}}" wx:key="index">
+      <!-- 包裹图片+两行文字 id="{{index}}"是给按下了那个item记录-->
+        <view class="view_tupian_wenzi" bindtap="click" data-item="{{item}}" data-leixing="{{item.leixing}}">
+          <!-- <image class="image_1" src="../images/main_geren.png" /> -->
+          <!-- 包裹两行文字 -->
+          <view class="view_wenzi2">
+            <text class="text_zhuti">主题：{{item.leixing}}</text>
+            <text class="text_small">{{item.textVal}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class="Rose-empty" wx:else>
+      论坛还是空的，快来发布吧~
+    </view>
+  </view>
+
+  <!--八卦-->
+  <view hidden="{{currentTab!==4}}">
+    <view wx:if="{{list_4.length>0}}">
+      <block wx:for="{{list_4}}" wx:key="index">
+      <!-- 包裹图片+两行文字 id="{{index}}"是给按下了那个item记录-->
+        <view class="view_tupian_wenzi" bindtap="click" data-item="{{item}}" data-leixing="{{item.leixing}}">
+          <!-- <image class="image_1" src="../images/main_geren.png" /> -->
+          <!-- 包裹两行文字 -->
+          <view class="view_wenzi2">
+            <text class="text_zhuti">主题：{{item.leixing}}</text>
+            <text class="text_small">{{item.textVal}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class="Rose-empty" wx:else>
+      论坛还是空的，快来发布吧~
+    </view>
+  </view>
+
+  <!--游戏-->
+  <view hidden="{{currentTab!==5}}">
+    <view wx:if="{{list_5.length>0}}">
+      <block wx:for="{{list_5}}" wx:key="index">
+      <!-- 包裹图片+两行文字 id="{{index}}"是给按下了那个item记录-->
+        <view class="view_tupian_wenzi" bindtap="click" data-item="{{item}}" data-leixing="{{item.leixing}}">
+          <!-- <image class="image_1" src="../images/main_geren.png" /> -->
+          <!-- 包裹两行文字 -->
+          <view class="view_wenzi2">
+            <text class="text_zhuti">主题：{{item.leixing}}</text>
+            <text class="text_small">{{item.textVal}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class="Rose-empty" wx:else>
+      论坛还是空的，快来发布吧~
+    </view>
+  </view>
+
+  <!--其他-->
+  <view hidden="{{currentTab!==6}}">
+    <view wx:if="{{list_6.length>0}}">
+      <block wx:for="{{list_6}}" wx:key="index">
+      <!-- 包裹图片+两行文字 id="{{index}}"是给按下了那个item记录-->
+        <view class="view_tupian_wenzi" bindtap="click" data-item="{{item}}" data-leixing="{{item.leixing}}">
+          <!-- <image class="image_1" src="../images/main_geren.png" /> -->
+          <!-- 包裹两行文字 -->
+          <view class="view_wenzi2">
+            <text class="text_zhuti">主题：{{item.leixing}}</text>
+            <text class="text_small">{{item.textVal}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class="Rose-empty" wx:else>
+      论坛还是空的，快来发布吧~
+    </view>
+  </view>
+
+  <movable-area class="movable-area">
+    <movable-view class="movable-view" direction="all" bindtap="add_topic">
+      <image src="/images/add.png" class="add_view"></image>
+    </movable-view>
+  </movable-area>
+</view>

@@ -1,0 +1,82 @@
+<!--详情页-->
+<view class="container">
+  <view class="c-top">
+    <view class="d-top">
+      <text class="title">{{detail.leixing}}</text>
+      <text class="info">{{detail.textVal}}</text>
+      <!-- 图片 -->
+      <block wx:if="{{img.length > 0}}">
+        <block wx:for="{{length}}" wx:for-item="i">
+          <image class="img_show" lazy-load="true" mode="aspectFit" src="{{img[i]}}"></image>
+        </block>
+      </block>
+      
+    </view>
+
+    <!--简介-->
+    <!-- <view class="t-info">
+      <view class="ti-top">
+        <text>400,000次播放</text>
+        <text>发表于：1小时前</text>
+      </view>
+      
+      <view class="ti-bottom">
+        <view>
+          <text class="iconfont icon-my"></text><text>牧民新歌</text>
+        </view>
+        <view>
+          <text class="iconfont icon-xihuan"></text><text>50,000喜欢</text>
+        </view>
+        <view>
+          <text class="iconfont icon-pinglun1"></text><text>1000+评论</text>
+        </view>
+      </view>
+    </view> -->
+  </view>
+
+  <!--评论列表-->
+  <view class="comments" wx:if="{{comments.length>0}}">
+    <block  wx:for="{{comments}}" wx:key="index">
+      <view class="item touch-active">
+        <view class="i-left">
+          <image class="c-u-img" src="http://m.qpic.cn/psc?/V51jU5mU0273mb0IdiHI2S0Nty2Hs3XW/ruAMsa53pVQWN7FLK88i5ruDpXOEBIBF0NQGtDYz6VCHUjYwqF4MsE8Rh3cvyICvOPEfcW*wdBISg4.xbclbKsliQhzPdKsZjUH5p1gRxxs!/mnull&bo=6gDXAOoA1wABCS4!&rf=photolist&t=5"></image>
+        </view>
+        <view class="i-right">
+          <view class="top">
+            <text class="u-name">匿名用户</text>
+            <text class="time">{{item.time}}</text>
+          </view>
+
+          <!--评论内容-->
+          <view class="content">
+            {{item.content}}
+          </view>
+        </view>
+      </view>
+    </block>
+    
+  </view>
+  <view class="Rose-empty" wx:else>
+    评论还是空的，快来发布吧~
+  </view>
+
+  <!--加载更多模版-->
+  <!-- <block wx:if="{{isLoading}}">
+    <template is="loading" />
+  </block> -->
+  <!-- <block wx:else>
+    <template is="nodata" />
+  </block> -->
+  
+
+  <!--评论盒子-->
+  <view class="cf-bg" catchtap="cemojiCfBg" style="display:{{cfBg ? 'block' : 'none'}}"></view>
+  <view class="comment-fixed">
+    <view class="cf-box">
+      <!-- <view class="emoji iconfont icon-emoji" catchtap="emojiShowHide"></view> -->
+      <input class="cf-content" bindinput="getcomments" maxlength="200" auto-height value="{{content}}" placeholder="我要评论" />
+      <text class="cf-send touch-active" bindtap="send">发送</text>
+    </view>
+
+  </view>
+</view>

@@ -1,0 +1,90 @@
+<view class="chatroom">
+
+  <!-- chats -->
+  <!-- bindscrolltoupper="onScrollToUpper" 
+    scroll-with-animation="{{scrollWithAnimation}}" -->
+  <scroll-view 
+    class="body" 
+    scroll-y 
+    scroll-top="{{scrollTop}}" 
+    scroll-into-view="{{scrollToMessage}}"
+    style='height: {{scrollHeight}};'
+  >
+  <!-- 
+      id="item-{{index}}"  -->
+    <view 
+      wx:for="{{chats}}"
+      wx:key="{{item._id}}"
+      id="item-{{index}}"
+      data-item="{{item}}" 
+      class="message {{openId == item._openid ? 'message__self' : ''}}" 
+      bindlongpress="recall"
+    >
+    <!-- 加了bindtap="recall" -->
+      <image 
+        class="avatar"
+        src="{{item.avatar}}"
+        mode="scaleToFill"
+      ></image> 
+      <view class="main">
+        <view class="nickname">{{item.nickName}}</view>
+        <block wx:if="{{item.msgType === 'image'}}">
+          <view class="image-wrapper">
+            <view class="loading" wx:if="{{item.writeStatus > -1}}">{{item.writeStatus}}%</view>
+            <image 
+              src="{{item.tempFilePath || item.imgFileID}}" 
+              data-fileid="{{item.tempFilePath || item.imgFileID}}" 
+              class="image-content" 
+              style="{{item.imgStyle}}"
+              mode="scallToFill" 
+              bindtap="onMessageImageTap"></image>
+          </view>
+        </block>
+        <block wx:else>
+          <view class="text-wrapper">
+            <view class="loading" wx:if="{{item.writeStatus === 'pending'}}">···</view>
+            <view class="text-content">{{item.textContent}}</view>
+          </view>
+        </block>
+      </view>
+    </view>
+
+    <!-- 占位 -->
+    <view style='width: 100%; height: 18vw;'></view>
+  </scroll-view>
+
+  <!-- message sender -->
+  <view class='inputRoom' style='bottom: {{inputBottom}}'>
+    <image style='width: 7vw; margin-left: 3.2vw;' src='../../images/photo.png' mode='widthFix' bindtap="onChooseImage"></image>
+    <input bindconfirm='onConfirmSendText' adjust-position='{{false}}' value='{{textInputValue}}' confirm-type='send' bindfocus='focus' bindblur='blur'></input>
+  </view>
+  <!-- <view class="footer">
+    <view class="message-sender" wx:if="{{userInfo}}">
+      <input 
+        class="text-input"
+        type="text"
+        confirm-type="send"
+        bindconfirm="onConfirmSendText"
+        cursor-spacing="20"
+        value="{{textInputValue}}"
+      ></input>
+
+      <image 
+        src="./photo.png" 
+        class="btn-send-image" 
+        mode="scaleToFill"
+        bindtap="onChooseImage"
+      ></image>
+    </view> -->
+
+    <!-- <view class="message-sender" wx:if="{{!userInfo}}">
+      <button 
+        open-type="getUserInfo" 
+        bindgetuserinfo="onGetUserInfo"
+        class="userinfo"
+      >请先登录后参与聊天</button>
+    </view>
+  </view> -->
+
+</view>
+

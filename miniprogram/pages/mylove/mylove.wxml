@@ -1,0 +1,23 @@
+<view>
+  <scroll-view scroll-y="true" style="height: 100%; width: 100%; display: flex; flex-direction: column;">
+    <view wx:if="{{list.length>0}}">
+      <block wx:for="{{list}}" wx:key="index">
+          <!-- 包裹图片+两行文字 id="{{index}}"是给按下了那个item记录-->
+          <view class="view_tupian_wenzi" bindtap="click" data-item="{{item}}">
+            
+            <!-- 包裹两行文字 -->
+            <view class="view_wenzi2">
+              <view class="yonghu">
+                <image class="image_1" src="http://m.qpic.cn/psc?/V51jU5mU0273mb0IdiHI2S0Nty2Hs3XW/ruAMsa53pVQWN7FLK88i5ruDpXOEBIBF0NQGtDYz6VCHUjYwqF4MsE8Rh3cvyICvOPEfcW*wdBISg4.xbclbKsliQhzPdKsZjUH5p1gRxxs!/mnull&bo=6gDXAOoA1wABCS4!&rf=photolist&t=5" />
+                <text class="yonghuming">匿名用户</text>
+              </view>
+              <text class="text_small">{{item.textVal}}</text>
+            </view>
+          </view>
+        </block>
+    </view>
+    <view class="Rose-empty" wx:else>
+      ~您还没有表白哦~
+    </view>
+  </scroll-view>
+</view>

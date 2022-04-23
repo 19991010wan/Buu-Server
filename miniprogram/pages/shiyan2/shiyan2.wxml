@@ -1,0 +1,62 @@
+<view class="container">
+    <!-- tab导航栏 -->
+    <!-- scroll-left属性可以控制滚动条位置 -->
+    <!-- scroll-with-animation滚动添加动画过渡 -->
+    <scroll-view scroll-x="true" class="nav" scroll-left="{{navScrollLeft}}" scroll-with-animation="{{true}}">
+        <block wx:for="{{navData}}" wx:for-index="idx" wx:for-item="navItem" wx:key="idx">
+            <view class="nav-item {{currentTab == idx ?'active':''}}"  data-current="{{idx}}" bindtap="switchNav">{{navItem.text}}</view>
+        </block> 
+    </scroll-view>
+    <!-- 页面内容 -->
+    <swiper class="tab-box" current="{{currentTab}}" duration="300" bindchange="switchTab">
+        <swiper-item wx:for-index="idx" wx:key="idx" class="tab-content">
+          <view>
+            <block wx:for="{{list}}" wx:key="index">
+            <!-- 包裹图片+两行文字 id="{{index}}"是给按下了那个item记录-->
+              <view class="view_tupian_wenzi" bindtap="click" data-item="{{item}}" data-leixing="{{item.leixing}}">
+                <!-- 包裹两行文字 -->
+                <view class="view_wenzi2">
+                  <view class="view_wenzi2">
+                    <view class="yonghu">
+                      <image class="image_1" src="{{item.avatar}}" />
+                      <text class="yonghuming">{{item.uName}}</text>
+                    </view>
+                  </view>
+
+                  <text class="text_zhuti">主题：{{item.leixing}}</text>
+                  <text class="text_small">{{item.textVal}}</text>
+                </view>
+              </view>
+            </block>
+          </view>
+        </swiper-item>
+
+        <swiper-item wx:for-index="idx" wx:key="idx" class="tab-content">
+          
+        </swiper-item>
+
+        <swiper-item wx:for-index="idx" wx:key="idx" class="tab-content">
+          
+        </swiper-item>
+
+        <swiper-item wx:for-index="idx" wx:key="idx" class="tab-content">
+          
+        </swiper-item>
+
+        <swiper-item wx:for-index="idx" wx:key="idx" class="tab-content">
+          
+        </swiper-item>
+
+        <swiper-item wx:for-index="idx" wx:key="idx" class="tab-content">
+          
+        </swiper-item>
+    </swiper>
+
+    <movable-area class="movable-area">
+      <movable-view class="movable-view" direction="all" bindtap="add_infor">
+        <image src="/images/add.png" class="add_view"></image>
+      </movable-view>
+  </movable-area>
+</view>
+
+

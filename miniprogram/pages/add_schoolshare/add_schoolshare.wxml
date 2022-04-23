@@ -1,0 +1,29 @@
+<view class='pages'>
+  <form bindsubmit="onSave">
+		<!-- <input name="label" placeholder="文章标题"/> -->
+		<input value="{{textVal_biaoti}}" bindinput="handletext_biaotiinput" placeholder="标题"/>
+
+    <view class='section-line'></view>
+
+    <textarea value="{{textVal}}" bindinput="handletextinput" name="opinion" placeholder="内容" />
+
+    <view class="content">
+    <view class='top'><text class='top_name'>添加图片</text></view>
+    <!-- 图片 -->
+    <view class="images_box">
+      <block wx:key="imgbox" wx:for="{{imgbox}}">
+        <view class='img-box'>
+          <image class='img' src='{{item}}'></image>
+          <view class='img-delect' data-deindex='{{index}}' bindtap='imgDelete1'>
+            <image class='img' src='../../images/delect.png'></image>   
+          </view>
+        </view>
+      </block>
+      <view class='img-box' bindtap='addPic1' wx:if="{{imgbox.length<9}}">
+        <image class='img' src='../../images/addimgsbtn.png'></image>   
+      </view>
+    </view>
+    <button bindtap='fb'>发布</button>
+    </view>
+    </form>
+</view>

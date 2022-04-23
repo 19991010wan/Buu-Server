@@ -1,0 +1,24 @@
+<view class="container">
+  <view wx:if="{{list_0.length>0}}">
+    <block wx:for="{{list_0}}" wx:key="index">
+      <!-- 包裹图片+两行文字 id="{{index}}"是给按下了那个item记录-->
+      <view class="view_tupian_wenzi" bindtap="click" data-item="{{item}}" data-leixing="{{item.leixing}}">
+         <!-- 包裹两行文字 -->
+         <view class="view_wenzi2">
+            <view class="view_wenzi2">
+              <view class="yonghu">
+                <image class="image_1" src="{{item.avatar}}" />
+                <text class="yonghuming">{{item.uName}}</text>
+              </view>
+            </view>
+
+            <text class="text_zhuti">主题：{{item.leixing}}</text>
+            <text class="text_small">{{item.textVal}}</text>
+          </view>
+       </view>
+    </block>
+  </view>
+  <view class="Rose-empty" wx:else>
+    ~您的信息共享还是空的~
+  </view>        
+</view>

@@ -1,0 +1,86 @@
+<view class="page">
+    <!-- 搜索框 -->
+    <!-- <SerchInput>
+
+    </SerchInput> -->
+    
+    
+    <scroll-view scroll-y="true" style="height: 100%; width: 100%; display: flex; flex-direction: column;">
+        <!-- 
+        轮播图
+        -->
+        <view style="width: 100%; height: auto; margin-bottom:10px;">
+            <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}"
+                    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="width:100%;height:365rpx;" circular="true">
+                <block wx:for-items="{{swipers}}">
+                    <swiper-item>
+                        <image class="swiper-item" src="{{item.image}}" mode="aspectFill"/>
+                    </swiper-item>
+                </block>
+            </swiper>
+        </view>
+        <!-- 
+            功能logo
+         -->
+        <view class="big-logo">
+            <block wx:for-items="{{logos}}">
+                <navigator url="{{item.url}}" class='logoinfo'>
+                    <image style="width:100rpx; height: 100rpx;" src="{{item.image}}" mode="aspectFit"/>
+                    <text class="logotext">{{item.title}}</text>
+                </navigator>
+                <!-- <view class="logoinfo">
+                    <image style="width:100rpx; height: 100rpx;" src="{{item.image}}" mode="aspectFit"/>
+                    <text class="logotext">{{item.title}}</text>
+                </view> -->
+            </block>
+        </view>
+        
+        <view class="divLine"></view>
+
+        <!-- 联大简介 -->
+        <view>
+            <view >
+                <text class='Show_txt'>联大简介</text>
+            </view>
+            <view class="IntroInfor">
+                北京联合大学是1985年经教育部批准成立的北京市属综合性大学，其前身是1978依靠清华大学、北京大学等创办的36所大学分校。。经过30多年的建设与发展，学校的综合实力显著增强，形成了经、法、教、文、史、理、工、医、管、艺等10个学科相互支撑、协调发展，以本科教育为主，研究生教育、高职教育、继续教育和留学生教育协调发展的完备人才培养体系，是北京市重点建设的应用型人才培养基地，也是北京市规模最大的高校之一。
+            </view>
+           
+        </view>
+
+        <view class="divLine"></view>
+
+        <!-- 联大地图
+        <view>
+            <view >
+                <text class='Show_txt'>联大地图</text>
+            </view>
+            
+           
+        </view> -->
+
+
+        <view class="divLine"></view>
+
+        <!-- 宣传视频 -->
+        <view>
+            <view >
+                <text class='Show_txt'>宣传视频</text>
+            </view>
+            <video src="{{videoUrl}}" object-fit="true" show-mute-btn="true" title="北京联合大学宣传视频" enable-play-gesture="true" class="VideoView"></video>
+        </view>
+        
+        
+              
+        
+
+    </scroll-view>
+
+    <!-- <login_dailog id='dialog' 
+      title='登录提示' 
+      content='小程序需要您的授权才能提供更好的服务哦' 
+      confirmText='知道了'
+      bind:confirmEvent='confirmEvent'
+      bindtap="getUserImg">
+    </login_dailog> -->
+</view>

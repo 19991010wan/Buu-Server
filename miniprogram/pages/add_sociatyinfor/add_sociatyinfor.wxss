@@ -1,0 +1,37 @@
+ /* miniprogram/pages/fb/fb.wxss */
+ .pages{
+  background-color:  #ffffff;
+  width: 98%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.section-line{
+  /* 分界线 */
+      width:90%;
+      height:1rpx;
+      background: #eeeeee;
+      margin: 0 auto;
+  }
+
+
+.fb{
+  margin-top: 20rpx;
+  background-color: #eb4450;
+}
+
+input {
+  margin: 30rpx 0 30rpx 40rpx;
+}
+
+.bottom{
+  position: fixed;
+  text-align: center;
+  bottom: 10rpx;
+  left: 0;
+  right: 0;
+}
+
+.btn_tuichu{
+  font-size: 25rpx;
+}
